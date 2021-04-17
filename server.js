@@ -50,10 +50,21 @@ app.get("/", (req, res)=>{
     res.render("home.ejs");
 });
 
+//INDEX DENVER REVIEW
+app.get("/denver/:id/reviews", (req, res)=>{
+    res.send("received too");
+});
+
 //NEW DENVER REVIEW
-app.get("/denver/review", (req, res)=>{
+app.get("/denver/:id/reviews/new", (req, res)=>{
     res.send("received");
 });
+
+//CREATE DENVER REVIEW
+app.post("/denver/:id/reviews", (req, res)=>{
+    res.send("received too");
+});
+
 
 
 //INDEX DENVER
@@ -70,6 +81,26 @@ app.get("/denver/new", (req, res)=>{
     res.render("denver/new");
 });
 
+//DELETE DENVER
+app.delete('/denver/:id', (req, res)=>{
+    Denver.findByIdAndRemove(req.params.id, (err, data)=>{
+        res.redirect('/denver');
+    });
+});
+
+//UPDATE DENVER 
+app.put('/denver/:id', (req, res)=>{
+    if(req.body.monthly === 'on'){
+        req.body.monthly = true;
+    } else {
+        req.body.monthly = false;
+    }
+    Denver.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
+        res.redirect('/denver');
+    });
+});
+
+
 //CREATE DENVER
 app.post("/denver/", (req, res)=>{
     if(req.body.readyToEat === "on"){ 
@@ -80,6 +111,18 @@ app.post("/denver/", (req, res)=>{
     Denver.create(req.body, (error, createdDenver)=>{
         console.log(createdDenver);
         res.redirect("/denver");
+    });
+});
+
+//EDIT DENVER
+app.get('/denver/:id/edit', (req, res)=>{
+    Denver.findById(req.params.id, (err, foundDenver)=>{
+        res.render(
+    		"denver/edit.ejs",
+    		{
+    			denver: foundDenver 
+    		}
+    	);
     });
 });
 

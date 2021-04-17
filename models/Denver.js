@@ -6,7 +6,12 @@ const denverSchema = new mongoose.Schema({
     hours: { type: String, required: true},
     daily: { type: String, required: true},
     monthly: Boolean,
-    imageUrl: String
+    imageUrl: String,
+    review: {
+        reviewer: String,
+        rating: Number,
+        comments: String
+    }
 });
 
 const Denver = mongoose.model("Denver", denverSchema);
