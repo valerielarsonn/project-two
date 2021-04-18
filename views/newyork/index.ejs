@@ -7,26 +7,26 @@
     <body>
         <nav>
             <a href="/">HOME PAGE</a>
-            <a href="/denver/new">NEW DENVER LOCATION</a>
+            <a href="/newyork/new">NEW NEW YORK LOCATION</a>
         </nav>
-        <h1>Denver Spots</h1>
+        <h1>New York Spots</h1>
         <ul>
-            <% for(let i = 0; i < denvers.length; i++){ %>
+            <% for(let i = 0; i < newyorks.length; i++){ %>
                 <li>
-                    NAME: <a href="/denver/<%=denvers[i].id; %>"><%=denvers[i].name; %></a> 
-                    ADDRESS: <%=denvers[i].address; %>
-                    HOURS: <%=denvers[i].hours; %> 
-                    DAILY RATE: <%=denvers[i].daily; %> 
-                    <% if(denvers[i].monthly === true){ %>
+                    NAME: <a href="/newyork/<%=newyorks[i].id; %>"><%=newyorks[i].name; %></a> 
+                    ADDRESS: <%=newyorks[i].address; %>
+                    HOURS: <%=newyorks[i].hours; %> 
+                    DAILY RATE: <%=newyorks[i].daily; %> 
+                    <% if(newyorks[i].monthly === true){ %>
                         This location has a monthly rate option.
                     <% } else { %>
                         This location does not have a monthly rate option.
                     <% } %>
-                    <img src="<%= denvers[i].imageUrl %>">
-                    <form action="/denver/<%=denvers[i].id; %>?_method=DELETE" method="POST">
+                    <img src="<%= newyorks[i].imageUrl %>">
+                    <form action="/newyork/<%=newyorks[i].id; %>?_method=DELETE" method="POST">
                         <input type="submit" value="DELETE"/>
                     </form>
-                    <a href="/denver/<%=denvers[i].id; %>/edit">Edit</a>
+                    <a href="/newyork/<%=newyorks[i].id; %>/edit">Edit</a>
                 </li>
             <% } %>
         </ul>

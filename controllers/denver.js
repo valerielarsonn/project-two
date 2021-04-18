@@ -1,5 +1,5 @@
 // require the Denver model
-const Denver = require('../models/Denver');
+const Denver = require("../models/Denver");
 
 //INDEX
 const index = async (req, res)=>{
@@ -12,13 +12,13 @@ const index = async (req, res)=>{
 
 //NEW 
 const newDenver = async (req, res)=>{
-    res.render("denver/new");
+    res.render("/new");
 };
 
 //DELETE
 const deleteDenver = async (req, res)=>{
     Denver.findByIdAndRemove(req.params.id, (err, data)=>{
-        res.redirect('/denver');
+        res.redirect("/denver");
     });
 };
 
@@ -30,18 +30,18 @@ const update = async (req, res)=>{
         req.body.monthly = false;
     }
     Denver.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel)=>{
-        res.redirect('/denver');
+        res.redirect("/denver");
     });
 };
 
 //CREATE
 const create = async (req, res)=>{
-    if(req.body.readyToEat === "on"){ 
+    if(req.body.monthly === "on"){ 
         req.body.monthly = true;
     } else {
         req.body.monthly = false;
     }
-    Denver.create(req.body, (error, createdDenver)=>{
+    Denver.createDenver(req.body, (error, createdDenver)=>{
         console.log(createdDenver);
         res.redirect("/denver");
     });
@@ -59,7 +59,7 @@ const edit = async (req, res)=>{
     });
 };
 
-//SHOW DENVER
+//SHOW
 const show = async (req, res)=>{
     Denver.findById(req.params.id, (err, foundDenver)=>{
         res.render("denver/show.ejs", {
@@ -68,7 +68,7 @@ const show = async (req, res)=>{
     });
 };
 
-module. exports = {
+module.exports = {
     index,
     newDenver,
     deleteDenver,

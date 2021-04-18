@@ -5,21 +5,21 @@
         <title></title>
     </head>
     <body>
-        <h1> Denver show page</h1>
-        NAME: <%=denver.name; %>
-        ADDRESS: <%=denver.address; %>
-        HOURS: <%=denver.hours; %> 
-        DAILY RATE: <%=denver.daily; %> 
-        <% if(denver.monthly === true){ %>
+        <h1> New York show page</h1>
+        NAME: <%=newyork.name; %>
+        ADDRESS: <%=newyork.address; %>
+        HOURS: <%=newyork.hours; %> 
+        DAILY RATE: <%=newyork.daily; %> 
+        <% if(newyork.monthly === true){ %>
             This location has a monthly rate option.
         <% } else { %>
             This location does not have a monthly rate option.
         <% } %>
-        <img src="<%= denver.imageUrl %>">
+        <img src="<%= newyork.imageUrl %>">
         <nav>
-            <a href="/denver">Back to Denver Locations</a>
-            <a href="/denver/:id/reviews/new">Leave a Review</a>
-            <a href="/denver/:id/reviews">See Reviews</a>
+            <a href="/newyork">Back to New York Locations</a>
+            <a href="/newyork/:id/reviews/new">Leave a Review</a>
+            <a href="/newyork/:id/reviews">See Reviews</a>
         </nav>
     </body>
 </html>

@@ -1,6 +1,8 @@
 const Denver = require("./models/Denver.js")
 
 const denverRouter = require("./routes/denver"); 
+const austinRouter = require("./routes/austin"); 
+const newyorkRouter = require("./routes/newyork"); 
 
 // Grab environment variables
 require("dotenv").config();
@@ -74,6 +76,8 @@ app.post("/denver/:id/reviews", (req, res)=>{
 
 //Mounting Routes
 app.use("/denver", denverRouter);
+app.use("/austin", austinRouter);
+app.use("/newyork", newyorkRouter);
 
 /////////////////////////////////////
 // App Listener
