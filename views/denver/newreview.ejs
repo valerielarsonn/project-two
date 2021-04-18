@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>New Review</h1>
+            <form action="/denver/<%=Denver.id; %>/reviews/new" method="POST">
+                NAME: <input type="text" name="reviewer" /><br/>
+                RATE FROM 1 - 5: <input type="text" name="rating" /><br/>
+                COMMENTS: <input type="text" name="comments" /><br/>
+                <input type="submit" name="" value="Submit"/>
+            </form>
+    </body>
+</html>

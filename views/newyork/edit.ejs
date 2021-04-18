@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Edit Information</h1>
+        <form action="/denver/<%=denver.id%>?_method=PUT" method="POST">
+            NAME: <input type="text" name="name" value="<%=denver.name; %>"/><br/>
+            ADDRESS: <input type="text" name="address" value="<%=denver.address; %>"/><br/>
+            HOURS: <input type="text" name="hours" value="<%=denver.hours; %> "/><br/>
+            DAILY RATE: <input type="text" name="daily" value="<%=denver.daily; %> "/><br/>
+            MARK IF MONTHLY RATE IS AVAILABLE: <input type="checkbox" name="monthly"
+            <% if(denver.monthly === true){ %>
+                checked
+            <% } %>
+            />
+            <br>
+            <input type="url" name="imageUrl" value="img src=<%= denver.imageUrl %>"/><br/>
+            <br/>
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
+    </body>
+</html>

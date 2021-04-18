@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1> Denver show page</h1>
+        NAME: <%=denver.name; %>
+        ADDRESS: <%=denver.address; %>
+        HOURS: <%=denver.hours; %> 
+        DAILY RATE: <%=denver.daily; %> 
+        <% if(denver.monthly === true){ %>
+            This location has a monthly rate option.
+        <% } else { %>
+            This location does not have a monthly rate option.
+        <% } %>
+        <img src="<%= denver.imageUrl %>">
+        <nav>
+            <a href="/denver">Back to Denver Locations</a>
+            <a href="/denver/:id/reviews/new">Leave a Review</a>
+            <a href="/denver/:id/reviews">See Reviews</a>
+        </nav>
+    </body>
+</html>
