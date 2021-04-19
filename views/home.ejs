@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%- include("partials/head") %>
         <meta charset="utf-8">
         <title></title>
     </head>
     <body class= "main">
+        <%- include("partials/header") %>
         <main>
-            <h1 style= "color: blue" class="title">WORK FROM ANYWHERE</h1>
+            <h1 style= "color: rgb(255, 248, 248)" class="title" class = "is-size-1">WORK FROM ANYWHERE</h1>
             <h2 style= " color: purple" class="subtitle">Hello</h2>
             <br><br>
-            <a href="/denver"><img src="https://images.squarespace-cdn.com/content/v1/52991237e4b06b094787fe1d/1551636924167-JM14N68ZL3UBHRX8GV5D/ke17ZwdGBToddI8pDm48kMP-ZZvD22eVon8l8OgVSx4UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKchB_s_lSPOhlvrAn825I_D9ubi2zwRmU5bp0PYOVKC765VDnk5UarU3jFeYwb0-YV/denver-sunrise.jpg?format=2500w" alt="Denver" width="500" height="600"></a>
-            <h1>DENVER</h1>
-            <a href="/austin"><img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/austin-skyline-cityscape-at-night-dszc.jpg" alt="Austin" width="500" height="600"></a>
-            <h1>AUSTIN</h1>
-            <a href="/newyork"><img src="https://dailygazette.com/wp-content/uploads/fly-images/139027/fe69c29be60ca615760f6a70670076b8-940x940.jpg" alt="New York" width="500" height="600"></a>
-            <h1>NEW YORK</h1>
+            <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <a href="/denver"><img src="https://i.imgur.com/TwozZuM.jpg" alt="Denver" width="400" height="600"></a>
+            <a href="/austin"><img src="https://i.imgur.com/s8hcXkW.jpg" alt="Austin" width="400" height="600"></a>
+            <a href="/newyork"><img src="https://i.imgur.com/Gr3Nb6w.jpg" alt="New York" width="400" height="600"></a>
+            <a href="/wip"><img src="https://i.imgur.com/l0VnMsG.jpg" alt="San Francisco" width="400" height="600"></a>
+            <a href="/wip"><img src="https://i.imgur.com/z1bSWnt.jpg" alt="Nashville" width="400" height="600"></a>
+            <a href="/wip"><img src="https://i.imgur.com/BpIR1QX.jpg" alt="Chicago" width="400" height="600"></a>
+            <a href="/wip"><img src="https://i.imgur.com/Nht2INr.jpg" alt="Dallas" width="400" height="600"></a>
+            <a href="/wip"><img src="https://i.imgur.com/G6D7dT1.jpg" alt="Atlanta" width="400" height="600"></a>
+            <a href="/wip"><img src="https://i.imgur.com/HSAmfwg.jpg" alt="Seattle" width="400" height="600"></a>
+            </div>
         </main>
+        <%- include("partials/footer") %>
     </body>
 </html>

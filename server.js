@@ -4,6 +4,7 @@ const denverRouter = require("./routes/denver");
 const austinRouter = require("./routes/austin"); 
 const newyorkRouter = require("./routes/newyork"); 
 
+
 // Grab environment variables
 require("dotenv").config();
 
@@ -54,6 +55,11 @@ app.get("/", (req, res)=>{
     res.render("home.ejs");
 });
 
+//NEW WIP
+app.get("/wip", (req, res)=>{
+    res.render("wip.ejs");
+});
+
 //INDEX DENVER REVIEW
 app.get("/denver/:id/reviews", (req, res)=>{
     Denver.create(req.body, (error, createdDenver)=>{
@@ -64,7 +70,7 @@ app.get("/denver/:id/reviews", (req, res)=>{
 
 //NEW DENVER REVIEW
 app.get("/denver/:id/reviews/new", (req, res)=>{
-    res.render("denver/newreview.ejs")
+    res.render("wip.ejs")
 });
 
 //CREATE DENVER REVIEW
