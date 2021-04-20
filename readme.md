@@ -9,7 +9,7 @@ I created this CRUD app "Working From Anywhere" with the idea of building off of
 
 <img src="https://i.imgur.com/xaOCNF8.png" width="250"> 
 
-<img src="hhttps://i.imgur.com/92tNEoM.png" width="250"> 
+<img src="https://i.imgur.com/92tNEoM.png" width="250"> 
 
 <img src="https://i.imgur.com/SIUXkng.png" width="250"> 
 
