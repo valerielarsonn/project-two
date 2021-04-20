@@ -1,5 +1,5 @@
 // require the Denver model
-const Newyork = require("../models/NewYork");
+const Newyork = require("../models/NewYork.js");
 
 //INDEX
 const index = async (req, res)=>{
