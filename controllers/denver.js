@@ -12,7 +12,7 @@ const index = async (req, res)=>{
 
 //NEW 
 const newDenver = async (req, res)=>{
-    res.render("/new");
+    res.render("denver/new");
 };
 
 //DELETE
@@ -41,7 +41,7 @@ const create = async (req, res)=>{
     } else {
         req.body.monthly = false;
     }
-    Denver.createDenver(req.body, (error, createdDenver)=>{
+    Denver.create(req.body, (error, createdDenver)=>{
         console.log(createdDenver);
         res.redirect("/denver");
     });

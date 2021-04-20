@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%- include("../partials/head") %>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <title></title>
     </head>
     <body>
-        <h1>Edit Information</h1>
+        <%- include("../partials/header") %>
+        <h1 style= "color: rgb(69, 172, 43) " class="title">Edit Information</h1>
         <form action="/austin/<%=austin.id%>?_method=PUT" method="POST">
             NAME: <input type="text" name="name" value="<%=austin.name; %>"/><br/>
             ADDRESS: <input type="text" name="address" value="<%=austin.address; %>"/><br/>

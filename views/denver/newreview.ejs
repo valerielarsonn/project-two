@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%- include("../partials/head") %>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <title></title>
     </head>
     <body>
+        <%- include("../partials/header") %>
         <h1>New Review</h1>
             <form action="/denver/<%=Denver.id; %>/reviews/new" method="POST">
                 NAME: <input type="text" name="reviewer" /><br/>
@@ -14,5 +14,6 @@
                 COMMENTS: <input type="text" name="comments" /><br/>
                 <input type="submit" name="" value="Submit"/>
             </form>
+    <%- include("../partials/footer") %>
     </body>
 </html>

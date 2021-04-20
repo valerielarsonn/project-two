@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <%- include("../partials/head") %>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title></title>
   </head>
   <body>
     <main>
+      <%- include("../partials/header") %>
       <nav>
-        <a href="/">HOME PAGE</a>
         <a href="/denver">DENVER LOCATIONS</a>
-    </nav>
-      <h1 style= "color: rgb(69, 172, 43) " class="title">NEW DENVER SPOT</h1>
-      <form action="/denver" method="POST">
+      </nav>
+      <h1 style= "color: rgb(95, 199, 69)" class="title">NEW DENVER SPOT</h1>
+      <form class="form" action="/denver" method="POST">
         <br/><br/>
         NAME: <input type="text" name="name" /><br/>
         ADDRESS: <input type="text" name="address" /><br/>
@@ -22,7 +21,8 @@
         MARK IF MONTHLY RATE IS AVAILABLE: <input type="checkbox" name="monthly" /><br/>
         <input type="url" placeholder="Image of Spot" name="imageUrl" /><br/>
         <input type="submit" name="" value="Create Spot"/>
-    </form>
+      </form>
     </main>
+  <%- include("../partials/footer") %>
   </body>
 </html>

@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <%- include("../partials/head") %>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title></title>
 </head>
   <body>
+    <%- include("../partials/header") %>
     <main>
       <nav>
-        <a href="/">HOME PAGE</a>
         <a href="/austin">AUSTIN LOCATIONS</a>
     </nav>
-      <h1 style= "color: rgb(69, 172, 43) " class="title">NEW AUSTIN SPOT</h1>
+      <h1 style= "color: rgb(95, 199, 69)" class="title">NEW AUSTIN SPOT</h1>
       <form action="/austin" method="POST">
         <br/><br/>
         NAME: <input type="text" name="name" /><br/>

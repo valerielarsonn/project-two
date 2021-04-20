@@ -1,4 +1,4 @@
-// require the Denver model
+// require the New York model
 const Newyork = require("../models/NewYork.js");
 
 //INDEX

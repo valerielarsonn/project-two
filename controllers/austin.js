@@ -1,4 +1,4 @@
-// require the Denver model
+// require the Austin model
 const Austin = require("../models/Austin");
 
 //INDEX

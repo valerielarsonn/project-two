@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%- include("../partials/head") %>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <title></title>
     </head>
     <body>
-        <h1> Denver show page</h1>
-        NAME: <%=denver.name; %>
+        <%- include("../partials/header") %>
+        <h1 style="color:yellowgreen" class="title is-2"> DENVER SPOT </h1>
+        <br>
+        NAME: <%=denver.name; %> 
+        <br>
         ADDRESS: <%=denver.address; %>
+        <br>
         HOURS: <%=denver.hours; %> 
+        <br>
         DAILY RATE: <%=denver.daily; %> 
+        <br>
         <% if(denver.monthly === true){ %>
             This location has a monthly rate option.
         <% } else { %>
             This location does not have a monthly rate option.
         <% } %>
+        <br>
         <img src="<%= denver.imageUrl %>">
         <nav>
-            <a href="/denver">Back to Denver Locations</a>
-            <a href="/denver/:id/reviews/new">Leave a Review</a>
-            <a href="/denver/:id/reviews">See Reviews</a>
+            <a href="/denver">Back to Denver Locations</a> |
+            <a href="/wip">Leave a Review</a> |
+            <a href="/wip">See Reviews</a>
         </nav>
     </body>
 </html>
