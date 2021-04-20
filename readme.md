@@ -1,5 +1,4 @@
-# Project Name
-**Working From Anywhere**
+# Working From Anywhere
 
 - **Author:** Valerie Larson
 - **Link to Live Site:** https://work-from-anywhere.herokuapp.com/
@@ -8,11 +7,11 @@
 ## Project Summary
 I created this CRUD app "Working From Anywhere" with the idea of building off of it in the future. With more people working remotely indefinitely, I want to add on to this website so there are short-term apartment/house leasing options and other useful information for nomads. This would be a go-to spot for those looking on moving around since they don't have to go into the office anymore. Why does working from home have to mean staying in the same city for the next 5 years? 
 
-![alt text](https://imgur.com/xaOCNF8)
+![Home](https://imgur.com/xaOCNF8)
 
-![alt text](https://imgur.com/92tNEoM)
+![Index](https://imgur.com/92tNEoM)
 
-![alt text](https://imgur.com/SIUXkng)
+![Edit](https://imgur.com/SIUXkng)
 
 
 ## Technology Used
